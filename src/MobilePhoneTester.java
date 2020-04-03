@@ -28,26 +28,20 @@ public class MobilePhoneTester {
             System.out.println(this.brand + " has been charged. Remaining battery amount: " + this.batteryAmount);
         }
 
-        void use(String app, double hours)
-        {
-            if(this.batteryAmount==0)
-            {
-                System.out.print("Application " + app + "cannot be run on " + this.brand+".");
+        void use(String app, double hours) {
+            if (this.batteryAmount == 0) {
+                System.out.print("Application " + app + " cannot be run on " + this.brand + ".");
                 System.out.println(" The phone is discharged.");
-            }
-            else if(this.batteryAmount<=100*hours)
-            {
-                double maxHours=this.batteryAmount/100;
-                hours=maxHours;
-                System.out.print("Application " + app + " has been run for " + hours + " on " + this.brand +".");
+            } else if (this.batteryAmount <= 100 * hours) {
+                double maxHours = this.batteryAmount / 100;
+                hours = maxHours;
+                System.out.print("Application " + app + " has been run for " + hours + " on " + this.brand + ".");
                 this.batteryAmount -= hours * 100;
                 System.out.println(" The phone has been discharged.");
-            }
-            else
-            {
-            System.out.print("Application " + app + " has been run for " + hours + " on " + this.brand+".");
-            this.batteryAmount -= hours * 100;
-            System.out.println(" Remaining battery amount: " + this.batteryAmount);
+            } else {
+                System.out.print("Application " + app + " has been run for " + hours + " on " + this.brand + ".");
+                this.batteryAmount -= hours * 100;
+                System.out.println(" Remaining battery amount: " + this.batteryAmount);
             }
 
         }
@@ -65,28 +59,5 @@ public class MobilePhoneTester {
             samsung.use("Angry Birds", 2);
 
         }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public static void main(String[] args) {
-
     }
 }
