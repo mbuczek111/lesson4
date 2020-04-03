@@ -2,10 +2,10 @@ public class CarTester {
 
 public static class Engine{
 
-    public String name;
-    public double horsepower;
-    public double capacity;
-    public boolean isStarted;
+    private String name;
+    private double horsepower;
+    private double capacity;
+    private boolean isStarted;
     Engine(String n, double h, double c)
     {
         name=n;
@@ -14,10 +14,10 @@ public static class Engine{
     }
 }
 public static class Car{
-    public String name;
-    public Engine carEngine;
-    public double fuelCapacity;
-    public double remainingCapacity;
+    private String name;
+    private Engine carEngine;
+    private double fuelCapacity;
+    private double remainingCapacity;
 
     Car(String n, Engine c, double f){
         name=n;
